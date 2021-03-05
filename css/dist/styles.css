@@ -315,3 +315,29 @@ h2 {
 .gallery-item .sub-text span {
   font-weight: 600;
 }
+#location iframe {
+  width: 100%;
+  height: 650px;
+}
+@media (max-width: 991px) {
+  #location iframe {
+    height: 500px;
+  }
+}
+#location .location-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+#location .location-info h3 {
+  font-family: 'Alegreya', serif;
+  font-size: 18px;
+  letter-spacing: 0.2em;
+}
+#location .location-info i {
+  margin-right: 3px;
+}
+#location .location-info p {
+  margin-bottom: 4px;
+}
