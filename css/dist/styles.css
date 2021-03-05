@@ -6,12 +6,14 @@
 }
 .main-font {
   font-family: 'Inter', sans-serif;
+  font-weight: 300;
 }
 .heading-font {
   font-family: 'Alegreya', serif;
 }
 * {
   font-family: 'Inter', sans-serif;
+  font-weight: 300;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -265,9 +267,6 @@ h2 {
 #about-us .about-us-text * {
   font-size: 18px;
 }
-#about-us .about-us-text p {
-  font-weight: 300;
-}
 #about-us .about-us-text p span {
   font-weight: 600;
 }
@@ -279,4 +278,40 @@ h2 {
   #about-us .about-us-text * {
     font-size: 16px;
   }
+}
+#work-examples .row {
+  margin: 0 -1px;
+}
+#work-examples .row > div {
+  padding: 0 1px 2px;
+}
+@media (max-width: 575px) {
+  #work-examples .gallery {
+    display: none;
+  }
+}
+.gallery-item {
+  position: relative;
+}
+.gallery-item img {
+  display: block;
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+@media (max-width: 767px) {
+  .gallery-item img {
+    height: 300px;
+  }
+}
+.gallery-item .sub-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  text-align: center;
+}
+.gallery-item .sub-text span {
+  font-weight: 600;
 }
