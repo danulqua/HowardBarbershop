@@ -3,16 +3,189 @@
 @brown-light: #C3A995;
 @green-action: #57886C;
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 .main-font {
     font-family: 'Inter', sans-serif;
 }
 
 .heading-font {
     font-family: 'Alegreya', serif;
+}
+
+* {
+    .main-font;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.welcome-screen {
+    height: 100vh;
+    min-height: 600px;
+    background: url('../../img/landing/fullscreen-img.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.header {
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    background-color: @grey-dark;
+    &.transparent {
+        background-color: rgba(black, .75);
+    }
+
+    img {
+        height: 50px;
+    }
+
+    .nav {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .navigation-block {
+            display: flex;
+        }
+    
+        .nav-list {
+            display: flex;
+            gap: 30px;
+            margin-left: 50px;
+
+            li {
+                display: flex;
+                align-items: center;
+
+                &.visible-mobile {
+                    display: none;
+                }
+            }
+
+            button {
+                padding: 10px 20px;
+                color: @green-action;
+                border: 1px solid @green-action;
+                border-radius: 3px;
+                background: transparent;
+                transition: .3s ease all;
+
+                &:hover {
+                    color: white;
+                    background: @green-action;
+                    cursor: pointer;
+                }
+
+                &:active {
+                    border-color: darken(@green-action, 10%);
+                    background: darken(@green-action, 10%);
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+
+        i {
+            font-size: 18px;
+        }
+
+        @media (max-width: 991px) {
+            .menu-button.visible-mobile {
+                position: relative;
+                height: 40px;
+                width: 50px;
+                border: 1px solid #fff;
+                border-radius: 3px;
+                cursor: pointer;
+
+                span {
+                    content: '';
+                    background-color: #fff;
+                    height: 1px;
+                    width: 21px;
+                    position: absolute;
+                    left: 13px;
+                    top: 18px;
+                    transition: 0.3s ease transform;
+                }
+
+                &:before {
+                    content: '';
+                    background-color: #fff;
+                    height: 1px;
+                    width: 21px;
+                    position: absolute;
+                    left: 13px;
+                    top: 13px;
+                    transition: 0.3s ease all;
+                }
+
+                &:after {
+                    content: '';
+                    background-color: #fff;
+                    height: 1px;
+                    width: 21px;
+                    position: absolute;
+                    left: 13px;
+                    bottom: 14px;
+                    transition: 0.3s ease all;
+                }
+
+                &.active span {
+                    transform: scale(0);
+                }
+
+                &.active:before {
+                    transform: rotate(45deg);
+                    top: 19px;
+                }
+
+                &.active:after {
+                    transform: rotate(-45deg);
+                    bottom: 18px;
+                }
+            }
+            
+            .nav-list {
+                flex-direction: column;
+                gap: 20px;
+                position: fixed;
+                top: 80px;
+                right: -350px;
+                margin: 0;
+                width: 300px;
+                height: 100vh;
+                min-height: 1000px;
+                padding: 30px 0 30px 40px;
+                background-color: darken(@grey-dark, 3%);
+                transition: 0.3s ease right;
+
+                &.active {
+                    right: 0;
+                }
+
+                li.visible-mobile {
+                    display: block;
+                }
+            }
+
+            .phone-block {
+                display: none;
+            }
+        }
+    }
 }
