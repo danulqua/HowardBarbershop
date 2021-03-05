@@ -341,3 +341,7 @@ h2 {
 #location .location-info p {
   margin-bottom: 4px;
 }
+#location .location-info .btn-action {
+  margin-top: 50px;
+  transform: scale(1.8);
+}
