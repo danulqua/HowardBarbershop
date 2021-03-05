@@ -30,13 +30,39 @@ a {
 
 .welcome-screen {
     height: 100vh;
-    min-height: 600px;
+    min-height: 800px;
     background: url('../../img/landing/fullscreen-img.jpg') no-repeat center;
     background-size: cover;
 }
 
+.btn-action {
+    padding: 10px 20px;
+    color: @green-action;
+    border: 1px solid @green-action;
+    border-radius: 3px;
+    background: transparent;
+    transition: .3s ease all;
+
+    &:hover {
+        color: white;
+        background: @green-action;
+        cursor: pointer;
+    }
+
+    &:active {
+        border-color: darken(@green-action, 10%);
+        background: darken(@green-action, 10%);
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
 .header {
     position: fixed;
+    z-index: 3;
+    top: 0;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -71,30 +97,6 @@ a {
 
                 &.visible-mobile {
                     display: none;
-                }
-            }
-
-            button {
-                padding: 10px 20px;
-                color: @green-action;
-                border: 1px solid @green-action;
-                border-radius: 3px;
-                background: transparent;
-                transition: .3s ease all;
-
-                &:hover {
-                    color: white;
-                    background: @green-action;
-                    cursor: pointer;
-                }
-
-                &:active {
-                    border-color: darken(@green-action, 10%);
-                    background: darken(@green-action, 10%);
-                }
-
-                &:focus {
-                    outline: none;
                 }
             }
         }
@@ -186,6 +188,85 @@ a {
             .phone-block {
                 display: none;
             }
+        }
+    }
+}
+
+.welcome-card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 900px;
+    height: 625px;
+    padding: 0 100px 20px;
+    background-color: rgba(#000, .75);
+    position: relative;
+    top: 150px;
+
+    .brand {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            width: 150px;
+        }
+
+        h1 {
+            .heading-font;
+            font-size: 96px;
+            margin-top: -30px;
+            letter-spacing: .1em;
+        }
+
+        > span {
+            font-size: 24px;
+            margin-top: -25px;
+            font-weight: 100;
+            letter-spacing: .8em;
+        }
+    }
+
+    .slogan {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .btn-action {
+        transform: scale(1.5);
+        margin-top: 15px;
+    }
+
+    @media (max-width: 1199px) {
+        width: 100%;
+    }
+
+    @media (max-width: 767px) {
+        height: 500px;
+        padding: 20px 70px 40px;
+
+        .brand {
+            margin-top: 0;
+
+            img {
+                width: 120px;
+            }
+
+            h1 {
+                margin-top: -10px;
+                font-size: 50px;
+            }
+
+            > span {
+                margin-top: -10px;
+                font-size: 10px;
+            }
+        }
+
+        .slogan {
+            font-size: 24px;
         }
     }
 }

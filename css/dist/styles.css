@@ -20,12 +20,34 @@ a {
 }
 .welcome-screen {
   height: 100vh;
-  min-height: 600px;
+  min-height: 800px;
   background: url('../../img/landing/fullscreen-img.jpg') no-repeat center;
   background-size: cover;
 }
+.btn-action {
+  padding: 10px 20px;
+  color: #57886C;
+  border: 1px solid #57886C;
+  border-radius: 3px;
+  background: transparent;
+  transition: 0.3s ease all;
+}
+.btn-action:hover {
+  color: white;
+  background: #57886C;
+  cursor: pointer;
+}
+.btn-action:active {
+  border-color: #436953;
+  background: #436953;
+}
+.btn-action:focus {
+  outline: none;
+}
 .header {
   position: fixed;
+  z-index: 3;
+  top: 0;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -58,26 +80,6 @@ a {
 }
 .header .nav .nav-list li.visible-mobile {
   display: none;
-}
-.header .nav .nav-list button {
-  padding: 10px 20px;
-  color: #57886C;
-  border: 1px solid #57886C;
-  border-radius: 3px;
-  background: transparent;
-  transition: 0.3s ease all;
-}
-.header .nav .nav-list button:hover {
-  color: white;
-  background: #57886C;
-  cursor: pointer;
-}
-.header .nav .nav-list button:active {
-  border-color: #436953;
-  background: #436953;
-}
-.header .nav .nav-list button:focus {
-  outline: none;
 }
 .header .nav i {
   font-size: 18px;
@@ -154,5 +156,74 @@ a {
   }
   .header .nav .phone-block {
     display: none;
+  }
+}
+.welcome-card {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  height: 625px;
+  padding: 0 100px 20px;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: relative;
+  top: 150px;
+}
+.welcome-card .brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.welcome-card .brand img {
+  width: 150px;
+}
+.welcome-card .brand h1 {
+  font-family: 'Alegreya', serif;
+  font-size: 96px;
+  margin-top: -30px;
+  letter-spacing: 0.1em;
+}
+.welcome-card .brand > span {
+  font-size: 24px;
+  margin-top: -25px;
+  font-weight: 100;
+  letter-spacing: 0.8em;
+}
+.welcome-card .slogan {
+  font-size: 36px;
+  text-align: center;
+}
+.welcome-card .btn-action {
+  transform: scale(1.5);
+  margin-top: 15px;
+}
+@media (max-width: 1199px) {
+  .welcome-card {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .welcome-card {
+    height: 500px;
+    padding: 20px 70px 40px;
+  }
+  .welcome-card .brand {
+    margin-top: 0;
+  }
+  .welcome-card .brand img {
+    width: 120px;
+  }
+  .welcome-card .brand h1 {
+    margin-top: -10px;
+    font-size: 50px;
+  }
+  .welcome-card .brand > span {
+    margin-top: -10px;
+    font-size: 10px;
+  }
+  .welcome-card .slogan {
+    font-size: 24px;
   }
 }
