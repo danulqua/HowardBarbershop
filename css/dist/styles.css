@@ -506,3 +506,29 @@ h2 {
     top: 180px;
   }
 }
+#services {
+  margin-top: 70px;
+  min-height: 71vh;
+}
+#services .service-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 7px;
+}
+#services .service-info span {
+  font-size: 18px;
+}
+#services .service-info .service-price {
+  font-weight: 600;
+}
+@media (max-width: 767px) {
+  #services .service-info span {
+    font-size: 14px;
+  }
+}
+@media (max-width: 374px) {
+  #services .service-info .service-title {
+    width: 200px;
+  }
+}

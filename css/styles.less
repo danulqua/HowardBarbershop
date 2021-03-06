@@ -45,6 +45,8 @@ a {
     text-decoration: none;
 }
 
+// ================ LANDING PAGE ================
+
 // WELCOME SCREEN
 .welcome-screen {
     height: 100vh;
@@ -539,6 +541,7 @@ h2 {
     }
 }
 
+// FOOTER
 .footer {
     background-color: @grey-dark;
     padding: 50px 0 80px;
@@ -611,6 +614,42 @@ h2 {
 
         .footer-copyright {
             top: 180px;
+        }
+    }
+}
+
+// ====================== X ======================
+
+// ================ SERVICES PAGE ================
+
+#services {
+    margin-top: 70px;
+    min-height: 71vh;
+
+    .service-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 7px;
+
+        span {
+            font-size: 18px;
+        }
+
+        .service-price {
+            font-weight: 600;
+        }
+
+        @media (max-width: 767px) {
+            span {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 374px) {
+            .service-title {
+                width: 200px;
+            }
         }
     }
 }
