@@ -86,12 +86,15 @@ a {
 }
 .header .nav .nav-list {
   display: flex;
-  gap: 30px;
   margin-left: 50px;
 }
 .header .nav .nav-list li {
   display: flex;
   align-items: center;
+  margin-right: 30px;
+}
+.header .nav .nav-list li:nth-child(5) {
+  margin-right: 0;
 }
 .header .nav .nav-list li.visible-mobile {
   display: none;
@@ -151,7 +154,6 @@ a {
   }
   .header .nav .nav-list {
     flex-direction: column;
-    gap: 20px;
     position: fixed;
     top: 80px;
     right: -350px;
@@ -162,6 +164,13 @@ a {
     padding: 30px 0 30px 40px;
     background-color: #1d1d1d;
     transition: 0.3s ease right;
+  }
+  .header .nav .nav-list li {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .header .nav .nav-list li:last-child {
+    margin-bottom: 0;
   }
   .header .nav .nav-list.active {
     right: 0;
@@ -196,7 +205,6 @@ a {
 .welcome-card {
   display: flex;
   flex-direction: column;
-  gap: 30px;
   justify-content: center;
   align-items: center;
   width: 900px;
@@ -210,6 +218,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 30px;
 }
 .welcome-card .brand img {
   width: 150px;
@@ -229,6 +238,7 @@ a {
 .welcome-card .slogan {
   font-size: 36px;
   text-align: center;
+  margin-bottom: 30px;
 }
 .welcome-card .btn-action {
   transform: scale(1.5);
@@ -282,21 +292,28 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 25px;
 }
 #about-us .about-us-text * {
   font-size: 18px;
+}
+#about-us .about-us-text p {
+  margin-bottom: 25px;
+}
+#about-us .about-us-text p:last-child {
+  margin-bottom: 0;
 }
 #about-us .about-us-text p span {
   font-weight: 600;
 }
 @media (max-width: 991px) {
   #about-us .about-us-text {
-    gap: 15px;
     margin-top: 20px;
   }
   #about-us .about-us-text * {
     font-size: 16px;
+  }
+  #about-us .about-us-text p {
+    margin-bottom: 15px;
   }
 }
 #work-examples .row {
@@ -337,7 +354,7 @@ h2 {
 }
 .slider {
   position: relative;
-  visibility: hidden;
+  display: none;
 }
 .slider .slider-slides {
   height: 450px;
@@ -409,7 +426,7 @@ h2 {
 }
 @media (max-width: 575px) {
   .slider {
-    visibility: visible;
+    display: block;
   }
 }
 #location iframe {
