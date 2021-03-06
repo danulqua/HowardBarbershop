@@ -404,16 +404,16 @@ h2 {
 
 .gallery-item {
     position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     img {
-        display: block;
-        height: 400px;
         width: 100%;
+        height: 100%;
         object-fit: cover;
-
-        @media (max-width: 767px) {
-            height: 300px;
-        }
+        transition: .3s ease transform;
     }
 
     .sub-text {
@@ -433,19 +433,16 @@ h2 {
 .slider {
     position: relative;
     display: none;
+    overflow: hidden;
 
     .slider-slides {
         height: 450px;
         position: relative;
 
         .slider-item {
-            position: absolute;
             height: 450px;
+            position: absolute;
             width: 100%;
-
-            img {
-                height: 450px;
-            }
 
             &.show {
                 animation: slide-show .5s;
@@ -714,5 +711,54 @@ h2 {
         .barber-info {
             padding-top: 30px;
         }
+    }
+}
+
+// ====================== X ======================
+
+// =============== COSMETICS PAGE ================
+
+#cosmetics {
+    margin-top: 70px;
+
+    .row {
+        margin: 0 -1px;
+
+        > div {
+            padding: 0 1px 2px;
+        }
+    }
+
+    .gallery-item {
+        height: 250px;
+
+        @media (max-width: 767px) {
+            height: 200px;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+
+        &:active {
+            img {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    .corner-price {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        background-color: rgba(#000, .75);
+        width: 70px;
+        height: 40px;
     }
 }

@@ -329,17 +329,16 @@ h2 {
 }
 .gallery-item {
   position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .gallery-item img {
-  display: block;
-  height: 400px;
   width: 100%;
+  height: 100%;
   object-fit: cover;
-}
-@media (max-width: 767px) {
-  .gallery-item img {
-    height: 300px;
-  }
+  transition: 0.3s ease transform;
 }
 .gallery-item .sub-text {
   position: absolute;
@@ -355,18 +354,16 @@ h2 {
 .slider {
   position: relative;
   display: none;
+  overflow: hidden;
 }
 .slider .slider-slides {
   height: 450px;
   position: relative;
 }
 .slider .slider-slides .slider-item {
+  height: 450px;
   position: absolute;
-  height: 450px;
   width: 100%;
-}
-.slider .slider-slides .slider-item img {
-  height: 450px;
 }
 .slider .slider-slides .slider-item.show {
   animation: slide-show 0.5s;
@@ -577,4 +574,39 @@ h2 {
   #barbers .barber-info {
     padding-top: 30px;
   }
+}
+#cosmetics {
+  margin-top: 70px;
+}
+#cosmetics .row {
+  margin: 0 -1px;
+}
+#cosmetics .row > div {
+  padding: 0 1px 2px;
+}
+#cosmetics .gallery-item {
+  height: 250px;
+}
+@media (max-width: 767px) {
+  #cosmetics .gallery-item {
+    height: 200px;
+  }
+}
+#cosmetics .gallery-item:hover img {
+  transform: scale(1.1);
+}
+#cosmetics .gallery-item:active img {
+  transform: scale(1.05);
+}
+#cosmetics .corner-price {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 70px;
+  height: 40px;
 }
