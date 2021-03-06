@@ -362,6 +362,7 @@ h2 {
     }
 }
 
+// SECTION "WORK EXAMPLES"
 #work-examples {
     .row {
         margin: 0 -1px;
@@ -406,6 +407,101 @@ h2 {
     }
 }
 
+.slider {
+    position: relative;
+    display: none;
+
+    .slider-slides {
+        height: 400px;
+        position: relative;
+
+        .slider-item {
+            position: absolute;
+            height: 400px;
+            width: 100%;
+
+            img {
+                height: 400px;
+            }
+
+            &.show {
+                animation: slide-show .5s;
+                animation-fill-mode: forwards;
+            }
+
+            &.hide {
+                animation: slide-hide .5s;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes slide-hide {
+                0% {
+                    opacity: 100%;
+                    visibility: visible;
+                }
+            
+                100% {
+                    opacity: 0%;
+                    visibility: hidden;
+                }
+            }
+            
+            @keyframes slide-show {
+                0% {
+                    opacity: 0%;
+                    visibility: hidden;
+                }
+            
+                100% {
+                    opacity: 100%;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+
+    .slider-controls {
+        position: absolute;
+        width: 100%;
+        top: 175px;
+        display: flex;
+        justify-content: space-between;
+
+        .slide-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(#000, .75);
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            font-size: 30px;
+            
+            i {
+                font-size: 30px;
+                transition: .05s ease all;
+            }
+
+            &:hover, &:active {
+                i {
+                    transform: scale(1.2);
+                }
+            }
+
+            &:active {
+                i {
+                    margin-top: 3px;
+                }
+            }
+        }
+    }
+
+    @media(max-width: 575px) {
+        display: block;
+    }
+}
+
+// SECTION "LOCATION"
 #location {
     iframe {
         width: 100%;
