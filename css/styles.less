@@ -411,19 +411,19 @@ h2 {
 
 .slider {
     position: relative;
-    display: none;
+    visibility: hidden;
 
     .slider-slides {
-        height: 400px;
+        height: 450px;
         position: relative;
 
         .slider-item {
             position: absolute;
-            height: 400px;
+            height: 450px;
             width: 100%;
 
             img {
-                height: 400px;
+                height: 450px;
             }
 
             &.show {
@@ -465,7 +465,7 @@ h2 {
     .slider-controls {
         position: absolute;
         width: 100%;
-        top: 175px;
+        top: 200px;
         display: flex;
         justify-content: space-between;
 
@@ -499,7 +499,7 @@ h2 {
     }
 
     @media(max-width: 575px) {
-        display: block;
+        visibility: visible;
     }
 }
 
@@ -650,6 +650,48 @@ h2 {
             .service-title {
                 width: 200px;
             }
+        }
+    }
+}
+
+// ====================== X ======================
+
+// ================ MASTERS PAGE =================
+
+#barbers {
+    margin-top: 70px;
+    padding-bottom: 50px;
+
+    .row {
+        margin-bottom: 50px;
+    }
+
+    .barber-img {
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .barber-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        p {
+            margin-top: 10px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .barber-info {
+            padding-top: 30px;
         }
     }
 }

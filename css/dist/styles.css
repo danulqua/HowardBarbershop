@@ -532,3 +532,32 @@ h2 {
     width: 200px;
   }
 }
+#barbers {
+  margin-top: 70px;
+  padding-bottom: 50px;
+}
+#barbers .row {
+  margin-bottom: 50px;
+}
+#barbers .barber-img img {
+  width: 100%;
+  object-fit: cover;
+}
+#barbers .barber-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#barbers .barber-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+#barbers .barber-info p {
+  margin-top: 10px;
+}
+@media (max-width: 767px) {
+  #barbers .barber-info {
+    padding-top: 30px;
+  }
+}
