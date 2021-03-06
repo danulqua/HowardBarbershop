@@ -553,6 +553,20 @@ h2 {
     width: 200px;
   }
 }
+#services .invite-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+#services .invite-block p {
+  text-align: center;
+  font-size: 24px;
+}
+#services .invite-block button {
+  margin-top: 35px;
+  transform: scale(2);
+}
 #barbers {
   margin-top: 70px;
   padding-bottom: 50px;
