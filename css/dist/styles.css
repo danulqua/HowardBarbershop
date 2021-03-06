@@ -102,6 +102,13 @@ a {
 .header .nav i {
   font-size: 18px;
 }
+.header .nav a:hover {
+  text-decoration: underline;
+}
+.header .nav .visible-mobile a,
+.header .nav .phone-block a {
+  text-decoration: none;
+}
 @media (max-width: 991px) {
   .header .nav .menu-button.visible-mobile {
     position: relative;
