@@ -10,3 +10,12 @@ menuButton.addEventListener('click', () => {
     document.body.classList.toggle('disable-scroll');
     darkenBG.classList.toggle('show');
 });
+
+darkenBG.addEventListener('click', () => {
+    if (menuButton.classList.contains('active')) {
+        menuButton.classList.remove('active');
+        navList.classList.remove('active');
+        document.body.classList.remove('disable-scroll');
+        darkenBG.classList.remove('show');
+    }
+});

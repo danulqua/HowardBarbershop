@@ -610,3 +610,42 @@ h2 {
   width: 70px;
   height: 40px;
 }
+#single-cosmetic {
+  margin-top: 70px;
+}
+#single-cosmetic .cosmetic-img {
+  height: 400px;
+}
+#single-cosmetic .cosmetic-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#single-cosmetic h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+#single-cosmetic .cosmetic-description {
+  margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  #single-cosmetic .cosmetic-description {
+    margin-top: 20px;
+  }
+}
+#single-cosmetic .cosmetic-price {
+  font-size: 36px;
+  font-weight: 600;
+}
+@media (max-width: 767px) {
+  #single-cosmetic .cosmetic-price {
+    font-size: 30px;
+  }
+}
+#single-cosmetic .disclaimer {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 10px;
+  font-style: italic;
+}
