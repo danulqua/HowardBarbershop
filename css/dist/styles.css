@@ -337,19 +337,19 @@ h2 {
 }
 .slider {
   position: relative;
-  display: none;
+  visibility: hidden;
 }
 .slider .slider-slides {
-  height: 400px;
+  height: 450px;
   position: relative;
 }
 .slider .slider-slides .slider-item {
   position: absolute;
-  height: 400px;
+  height: 450px;
   width: 100%;
 }
 .slider .slider-slides .slider-item img {
-  height: 400px;
+  height: 450px;
 }
 .slider .slider-slides .slider-item.show {
   animation: slide-show 0.5s;
@@ -382,7 +382,7 @@ h2 {
 .slider .slider-controls {
   position: absolute;
   width: 100%;
-  top: 175px;
+  top: 200px;
   display: flex;
   justify-content: space-between;
 }
@@ -409,7 +409,7 @@ h2 {
 }
 @media (max-width: 575px) {
   .slider {
-    display: block;
+    visibility: visible;
   }
 }
 #location iframe {
