@@ -529,8 +529,7 @@ h2 {
 }
 #services {
   margin-top: 70px;
-  height: 83vh;
-  min-height: 620px;
+  min-height: 83vh;
 }
 #services .service-info {
   display: flex;
